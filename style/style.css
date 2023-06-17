@@ -1,16 +1,16 @@
 body {
     background-color: #ddd;
-    background-image: url("assets/fondo.jpg");
+    background-image: url("/assets/fondo.jpg");
+    background-repeat: none;
 }
 
 .container {
     position: absolute;
-    left: 50%;
-    top: 300px;
-    transform: translate(-50%, 0);
-    perspective: 1000px;
-    width: 430px;
-    height: 475px;
+    left: 40%;
+    top: 200px;
+    
+    width: 530px;
+    height: 575px;
     
 }
 
