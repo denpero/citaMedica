@@ -116,7 +116,7 @@
         </div>
     </main>
     <section class="div-section">
-        <table class="table striped responsive-table">
+        <table class="table striped responsive-table"  id="tablePacientes" name="tablePacientes">
             <thead >
               <tr class="blue lighten-5">
                 <th>Nombre</th>
@@ -125,7 +125,7 @@
                 <th>Acciones</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody id="id-tbody">
             </tbody>
           </table>
           
@@ -135,32 +135,9 @@
               <h4>Edit Record</h4>
               <div class="row">
                 <form class="col s12">
-                  <div class="row">
-                    <div class="input-field col s6">
-                      <i class="material-icons prefix">account_circle</i>
-                      <input placeholder="Placeholder" id="name" type="text" class="validate">
-                      <label for="name">Name</label>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="input-field col s12">
-                      <i class="material-icons prefix">phone</i>
-                      <input id="phone" placeholder="Placeholder" type="tel" class="validate">
-                      <label for="phone">Phone</label>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="input-field col s12">
-                      <i class="material-icons prefix">signal_cellular_4_bar</i>
-                      <input id="dtmf" placeholder="Placeholder" type="number" class="validate">
-                      <label for="dtmf">DTFM</label>
-                    </div>
-                  </div>
+                  
                 </form>
               </div>
-            </div>
-            <div class="modal-footer">
-              <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Update</a>
             </div>
           </div>
     </section>
@@ -168,7 +145,6 @@
         <div class="footer-copyright">
             <div class="container">
                 © 2014 Copyright Text
-                <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
             </div>
         </div>
     </footer>
