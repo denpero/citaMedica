@@ -11,7 +11,28 @@
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- Jquery -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
+
+    <!-- <link
+      href="https://code.jquery.com/ui/1.12.1/themes/ui-lightness/jquery-ui.css"
+      rel="stylesheet"
+    />
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"
+  ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+     --><!-- 
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"
+      integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script> -->
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
@@ -28,7 +49,6 @@
     " rel="stylesheet">
 
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <title>Formularios</title>
 </head>
 
@@ -36,13 +56,13 @@
     <div>
         <nav>
             <div class="nav-wrapper  indigo darken-4">
-                
-                <a href="#!" class="brand-logo">Logo</a>
+
+                <a href="#!" class="brand-logo">Registrar Cita Médica</a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="sass.html">Sass</a></li>
-                    <li><a href="badges.html">Components</a></li>
+                    <!-- <li><a href="sass.html">Sass</a></li>
+                    <li><a href="badges.html">Components</a></li> -->
                     <!-- Dropdown Trigger -->
-                    <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Opciones<i
+                    <li><a class="dropdown-trigger" href="#!" data-target="dropdown1" onclick="salir()">Salir<i
                                 class="material-icons right">arrow_drop_down</i></a></li>
                 </ul>
             </div>
@@ -56,13 +76,13 @@
                     <div class="input-group">
                         <div class="file-field input-field">
                             <div class="btn indigo darken-4">
-                              <span>Foto</span>
-                              <input type="file" accept="image/*" name="image" id="image">
+                                <span>Foto</span>
+                                <input type="file" accept="image/*" name="image" id="image">
                             </div>
                             <div class="file-path-wrapper">
-                              <input class="file-path validate" type="text" for="image">
+                                <input class="file-path validate" type="text" for="image">
                             </div>
-                          </div>
+                        </div>
                     </div>
                     <div class="input-group">
                         <input type="text" id="nombre" name="nombre">
@@ -77,18 +97,19 @@
                         <label class="label" for="motivo">Motivo</label>
                     </div>
                     <div class="input-group">
-                        <input type="date" id="datepicker" name="datepicker" class="datepicker  purple lighten-5" placeholder="Fecha">
+                        <input type="date" id="datepicker" name="datepicker" class="datepicker  purple lighten-5"
+                            placeholder="Fecha">
                         <label class="label" for="datepicker">Fecha de consulta</label>
                     </div>
                     <div class="input-group">
                         <div class="row">
                             <div class="input-field col s12">
                                 <label class="label" for="timepicker">Hora am/pm</label>
-                                <input placeholder="" id="timepicker" class="timepicker" type="time">
+                                <input type="text" class="timepicker" id="timepicker">
                             </div>
                         </div>
                     </div>
-
+                    <!-- <input type="text" class="timepicker"> -->
                     <div class="input-group radio">
                         <input type="radio" name="doctor" id="draLuna" value="draLuna">
                         <label for="draLuna">Dra Luna</label>
@@ -100,40 +121,40 @@
                         <label for="tipoPaciente">Primer Ingreso</label>
                     </div>
                     <div class="btnEnviar">
-                        <button class="btn waves-effect indigo darken-4 "  type="submit" name="action">Enviar
+                        <button class="btn waves-effect indigo darken-4 " type="submit" name="action">Enviar
                             <i class="material-icons right">send</i>
                         </button>
                     </div>
-                    
+
                 </div>
             </form>
         </div>
     </main>
     <section class="div-section">
-        <table class="table striped responsive-table"  id="tablePacientes" name="tablePacientes">
-            <thead >
-              <tr class="blue lighten-5">
-                <th>Nombre</th>
-                <th>Día</th>
-                <th>Hora</th>
-                <th>Acciones</th>
-              </tr>
+        <table class="table striped responsive-table" id="tablePacientes" name="tablePacientes">
+            <thead>
+                <tr class="blue lighten-5">
+                    <th>Nombre</th>
+                    <th>Día</th>
+                    <th>Hora</th>
+                    <th>Acciones</th>
+                </tr>
             </thead>
             <tbody id="id-tbody">
             </tbody>
-          </table>
-          
-          <!-- Modal Structure -->
-          <div id="modal1" class="modal modal-fixed-footer">
+        </table>
+
+        <!-- Modal Structure -->
+        <div id="modal1" class="modal modal-fixed-footer">
             <div class="modal-content">
-              <h4>Edit Record</h4>
-              <div class="row">
-                <form class="col s12">
-                  
-                </form>
-              </div>
+                <h4>Edit Record</h4>
+                <div class="row">
+                    <form class="col s12">
+
+                    </form>
+                </div>
             </div>
-          </div>
+        </div>
     </section>
     <footer class="page-footer light-blue accent-4">
         <div class="footer-copyright">
@@ -151,9 +172,30 @@
 
 
     </script> -->
-    <script src="js/principal.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/datepicker/1.0.10/datepicker.min.js" integrity="sha512-RCgrAvvoLpP7KVgTkTctrUdv7C6t7Un3p1iaoPr1++3pybCyCsCZZN7QEHMZTcJTmcJ7jzexTO+eFpHk4OCFAg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-timepicker/1.14.0/jquery.timepicker.js" integrity="sha512-v84GNWs/NREzyztDm0s2NCXR9tIXH4aD/pe3uktyJeCWICr+/J38obdjXx1wxPRzTXHY54Hf0zBD5fbuRSNvGw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+   <!--  <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    --> <script src="js/principal.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.validation/1.14.0/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/datepicker/1.0.10/datepicker.min.js"
+        integrity="sha512-RCgrAvvoLpP7KVgTkTctrUdv7C6t7Un3p1iaoPr1++3pybCyCsCZZN7QEHMZTcJTmcJ7jzexTO+eFpHk4OCFAg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-timepicker/1.14.0/jquery.timepicker.js"
+        integrity="sha512-v84GNWs/NREzyztDm0s2NCXR9tIXH4aD/pe3uktyJeCWICr+/J38obdjXx1wxPRzTXHY54Hf0zBD5fbuRSNvGw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+ -->
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+     -->
 </body>
 
 </html>

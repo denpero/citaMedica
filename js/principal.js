@@ -122,9 +122,19 @@ function salir() {
 }
 /* date */
 $(function () {
-    $("#datepicker").datepicker();
+    var dateToday = new Date();
+    console.log(dateToday);
+    $("#datepicker").datepicker({
+        minDate:0,
+        
+    });
+    
 });
 /* Timer */
+$(document).ready(function(){
+    $('.timepicker').timepicker();
+
+});
 /* $(function() {
   $('#timepicker').timepicker();
 }); */
